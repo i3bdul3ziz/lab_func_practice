@@ -1,28 +1,4 @@
-Skip to content
- Enterprise
-Search or jump to…
-
-Pull requests
-Issues
-Explore
- 
-@ebere 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-SEI-CC
-/
-daily-js-code-challenges
-0
-5194
- Code Issues 0 Pull requests 0 Projects 0 Wiki Insights
-daily-js-code-challenges/challenges.js
- jim-clark Clarify #26
-3e41501 on 15 Dec 2019
-811 lines (483 sloc)  27.3 KB
-  
-/*-----------------------------------------------------------------
+ /*-----------------------------------------------------------------
 Challenge: 00-sayHello (example)
 Difficulty: Basic
 Prompt:
