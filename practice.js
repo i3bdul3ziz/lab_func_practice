@@ -1,4 +1,4 @@
- /*-----------------------------------------------------------------
+/*-----------------------------------------------------------------
 Challenge: 00-sayHello (example)
 Difficulty: Basic
 Prompt:
@@ -7,12 +7,11 @@ Examples:
 sayHello() //=> Hello!
 -----------------------------------------------------------------*/
 // Your solution for 00-sayHello (example) here:
-
-function sayHello() {
-  return 'Hello!'
-}
-
-
+// function sayHello() {
+//   return 'Hello!'
+// }
+//  let sayHello = () =>  'Hello!'
+// console.log(sayHello())
 /*-----------------------------------------------------------------
 Challenge: 01-addOne
 Difficulty: Basic
@@ -23,11 +22,9 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
-
-
-
-
-
+// let addOne = (num)  => num +1
+// console.log(addOne(1))
+// console.log(addOne(-5))
 /*-----------------------------------------------------------------
 Challenge: 02-addTwoNumbers
 Difficulty: Basic  
@@ -41,11 +38,14 @@ addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
-
-
-
-
-
+// let addTwoNumbers = (num1 ,num2 )  => {
+//   if (typeof num1 === 'number' && typeof num2 === 'number' ){
+//    return num1 + num2 
+//   }else 
+//     return NaN
+// } 
+// console.log(addTwoNumbers(5, 10))
+// console.log(addTwoNumbers('Hello', 5))
 /*-----------------------------------------------------------------
 Challenge: 03-sumNumbers
 Difficulty: Basic  
@@ -59,11 +59,19 @@ sumNumbers([2, 10, -5]) //=> 7
 sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
-
-
-
-
-
+//  let sum =0;
+// let sumNumbers = (array)  => {
+//   // array.forEach((element, index) => {
+//   //   sum += element})
+//   for (let x=0;x< array.length; x++){
+//     sum += array[x];
+//   }
+// }
+// console.log(sumNumbers([10]));
+// const sumNumbers = arr => arr.reduce((a,b) => a + b, 0)
+// console.log(sumNumbers([5, 10]))
+// console.log(sumNumbers([2, 10, -5]))
+// console.log(sumNumbers([]))
 /*-----------------------------------------------------------------
 Challenge: 04-addList
 Difficulty: Basic
@@ -77,11 +85,17 @@ add(1,50,1.23) //=> 52.23
 add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
-
-
-
-
-
+// let sum = (...arguments) => { 
+//     var s = 0;
+//     for (var i=0; i < arguments.length; i++) {
+//         s += arguments[i];
+//     }
+//     return s;
+// }
+// console.log(sum (1,50,1.23))
+// console.log(sum (1))
+// console.log(sum ())
+// console.log(sum (7,-12))
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
 Difficulty: Basic
@@ -96,11 +110,14 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-
-
-
-
-
+// let computeRemainder = (num1 ,num2) => { 
+//   if ( num2 === 0 ){
+//    return 'Infinity'
+//   } else 
+//     return num1 % num2
+// } 
+// console.log(computeRemainder(10,2))
+// console.log(computeRemainder(4,0))
 /*-----------------------------------------------------------------
 Challenge: 06-range
 Difficulty: basic
@@ -114,11 +131,20 @@ range(1,1) //=> []
 range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
-
-
-
-
-
+// let range = (num1, num2) =>{
+//   if (num1 > num2){
+//     return "first argument up to one less than the second argument";
+//   } else {
+//    let arr= [] 
+//    for (let i=num1; i <num2; i++){
+//      arr.push(i)
+//    }
+//    return arr;
+//   } 
+// }
+// console.log(range(1,4))
+// console.log(range(-2, 3))
+// console.log(range(5,2))
 /*-----------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
 Difficulty: Basic
@@ -128,11 +154,9 @@ Examples:
 reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES" 
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
-
-
-
-
-
+// let reverseUpcaseString = (str) => { 
+//  return str.split("").reverse().join("").toUpperCase(); }
+// console.log(reverseUpcaseString("SEI Rocks!"))
 /*-----------------------------------------------------------------
 Challenge: 08-removeEnds
 Difficulty: Basic
@@ -144,10 +168,14 @@ removeEnds('SEI Rocks!'); //=> "DI Rocks"
 removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
-
-
-
-
+let removeEnds = (string) => {
+  if (string.length < 3) {
+    return "'' "
+  } else
+  return string.substring(1, string.length -1 );
+}
+console.log(removeEnds('SEI Rocks!'))
+console.log(removeEnds('a'))
 
 /*-----------------------------------------------------------------
 Challenge: 09-charCount
@@ -162,8 +190,20 @@ charCount('hello') //=> { h: 1, e: 1, l: 2, o: 1 }
 charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i: 2, s: 2, f: 1, n: 1, t: 2, c: 1, '!': 1 }
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
-
-
+let charCount = (str) => {
+  let obj = {}
+for (let i = 0; i < str.length; i++) {
+    let char = str.charAt(i)
+    if(obj[char]){
+      obj[char]++
+    }else {
+      obj[char]=1
+    }
+  }
+  return obj
+}
+console.log(charCount("hello"))
+console.log(charCount('Today is fantastic!'))
 
 
 
@@ -184,9 +224,24 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
-
-
+let formatWithPadding = (num, char, len) => {
+  let newLength = 0
+  let arr = []
+  let numStringLngth = num.toString().length
+  if(numStringLngth < len){
+    newLength = len - numStringLngth
+    for(i=0; i < newLength; i++){
+      arr.push(char)
+    }
+    arr.push(num)
+    return arr.join('')
+  }else {
+    return num.toString()
+  }
+}
+console.log(formatWithPadding(123, '0', 5)) //=> "00123"
+console.log(formatWithPadding(42, '*', 10)) //=> "********42"
+console.log(formatWithPadding(1234, '*', 3)) //=> "1234"
 
 /*-----------------------------------------------------------------
 Challenge: 11-isPalindrome
@@ -205,7 +260,14 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 
+let isPalindrome = (str) => {
+  return str.toLowerCase().replace(/\s/g, '') == str.split('').reverse().join('').toLowerCase().replace(/\s/g, '');
+}
 
+console.log(isPalindrome('SEI Rocks')) //=> false
+console.log(isPalindrome('rotor')) //=> true
+console.log(isPalindrome('A nut for a jar of tuna')) //=> true
+console.log(isPalindrome('')) //=> true
 
 
 /*-----------------------------------------------------------------
@@ -223,10 +285,27 @@ hammingDistance('!!!!', '****'); //=> 4
 hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
-
-
-
-
+let hammingDistance = (str, str1) => {
+  let count = 0
+  if(str.length === str1.length){
+    str.split('')
+    str1.split('')
+    for(let i = 0; i < str.length; i++){
+        if(str[i] !== str1[i]){
+          if(str.indexOf(str[i]) === str1.indexOf(str1[i])){
+            count++
+          }
+        }
+    }
+    return count
+  } else {
+    return NaN
+  }
+}
+console.log(hammingDistance('abc', 'abc')) //=> 0
+console.log(hammingDistance('a1c', 'a2c')) //=> 1
+console.log(hammingDistance('!!!!', '****')) //=> 4
+console.log(hammingDistance('abc', 'ab')) //=> NaN
 
 /*-----------------------------------------------------------------
 Challenge: 13-mumble
@@ -243,9 +322,19 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-
-
-
+let mumble = (str) => {
+  let str2 = ""
+  str.split('')
+  for(let i = 0; i < str.length; i++){
+      str2 += str[i].repeat(i+1) + "-"
+  }
+  str2 = str2.substring(0, (str2.length - 1))
+  return str2
+}
+console.log(mumble('X')) //=> 'X'
+console.log(mumble('abc')) //=> 'a-bb-ccc'
+console.log(mumble('121')) //=> '1-22-111'
+console.log(mumble('!A 2')) //=> '!-AA-   -2222'
 
 /*-----------------------------------------------------------------
 Challenge: 14-fromPairs
@@ -259,10 +348,21 @@ fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 }
 fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
-
-
-
-
+let fromPairs = (arr) => {
+  let arr1 = []
+  let obj = {}
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++){
+      arr1.push(arr[i][j])
+    }
+  }
+  for(i = 0; i < arr1.length; i = i + 2){
+      obj[arr1[i]] = arr1[i+1]
+  }
+  return obj
+}
+console.log(fromPairs([ ['a', 1], ['b', 2], ['c', 3] ])) //=> { a: 1, b: 2, c: 3 }
+console.log(fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ])) //=> { name: "Sally", age: 24 }
 
 /*-----------------------------------------------------------------
 Challenge: 15-mergeObjects
@@ -308,10 +408,19 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
-
-
-
-
+let findHighestPriced = (arr) => {
+  let object = {}
+  let biggestPrice = 0
+  arr.forEach((element, index) => {
+      if(index + 1 < arr.length){
+        if (element.price > arr[index + 1].price) {
+          biggestPrice = element
+        }
+      }
+  })
+  object = {...biggestPrice}
+  return object
+}
 
 /*-----------------------------------------------------------------
 Challenge: 17-mapArray
@@ -629,13 +738,3 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------*/
 // Your solution for 30- here:
-
-
-© 2020 GitHub, Inc.
-Help
-Support
-API
-Training
-Blog
-About
-GitHub Enterprise Server 2.20.1
